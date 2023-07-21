@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập về positon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .menu {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            background-color: orange;
+            padding: 12px 20px;
+            border-radius: 10px;
+        }
+
+        .menu ul li {
+            display: inline-block;
+            color: white;
+            margin-right: 30px;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            height: 1000px;
+            background-color: lightgrey;
+            border-radius: 8px;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .container .box {
+            background-color: white;
+            display: inline-block;
+            padding: 18px 45px;
+            border-radius: 8px;
+            position: absolute;
+            font-size: 20px;
+        }
+
+        .container .box:nth-child(1) {
+            background-color: orange;
+            color: white;
+        }
+
+        .container .box:nth-child(2) {
+            background-color: red;
+            color: white;
+            top: 20px;
+            right: 20px;
+        }
+
+        .container .box:nth-child(3) {
+            background-color: green;
+            color: white;
+            bottom: 40px;
+            right: 30px;
+        }
+
+        .container .box:nth-child(4) {
+            background-color: blue;
+            color: white;
+            bottom: 60px;
+            left: 50px;
+        }
+
+        .text-box {
+            background: rgb(39, 81, 180);
+            margin-top: 30px;
+            padding: 80px 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .text-box .text {
+            color: white;
+            z-index: 1;
+            position: relative;
+        }
+
+        .text-box .text::first-line {
+            text-transform: uppercase;
+        }
+
+        .text-box .text::first-letter {
+            font-size: 50px;
+        }
+
+        .text-box::before {
+            content: "";
+            display: inline-block;
+            background-color: black;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+
+        .text-box::after {
+            content: "";
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.244);
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            right: -40px;
+            bottom: -20px;
+            border-radius: 50%;
+        }
+
+        .contact {
+            width: 60px;
+            height: 60px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+            font-size: 21px;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 20px;
+            right: 5px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Bài tập về position</h2>
+    <p>
+        <strong>Yêu cầu</strong>: Code các box như dưới đây. 
+        Chú ý có cả bo góc cho các element.
+    </p>
+
+    <div class="menu">
+        <ul>
+            <li>Trang chủ</li>
+            <li>Giới thiệu</li>
+            <li>Sản phẩm</li>
+            <li>Tin tức</li>
+            <li>Liên hệ</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <div class="text-box">
+        <p class="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est saepe ipsam voluptate! 
+            Laboriosam a voluptatum sint odit, doloribus perspiciatis nostrum aspernatur provident nesciunt molestias aliquam nihil ratione labore tempore.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est saepe ipsam voluptate! 
+            Laboriosam a voluptatum sint odit, doloribus perspiciatis nostrum aspernatur provident nesciunt molestias aliquam nihil ratione labore tempore.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est saepe ipsam voluptate! 
+            Laboriosam a voluptatum sint odit, doloribus perspiciatis nostrum aspernatur provident nesciunt molestias aliquam nihil ratione labore tempore.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est saepe ipsam voluptate! 
+            Laboriosam a voluptatum sint odit, doloribus perspiciatis nostrum aspernatur provident nesciunt molestias aliquam nihil ratione labore tempore.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est saepe ipsam voluptate! 
+            Laboriosam a voluptatum sint odit, doloribus perspiciatis nostrum aspernatur provident nesciunt molestias aliquam nihil ratione labore tempore.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est saepe ipsam voluptate! 
+            Laboriosam a voluptatum sint odit, doloribus perspiciatis nostrum aspernatur provident nesciunt molestias aliquam nihil ratione labore tempore.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est saepe ipsam voluptate! 
+            Laboriosam a voluptatum sint odit, doloribus perspiciatis nostrum aspernatur provident nesciunt molestias aliquam nihil ratione labore tempore.
+        </p>
+    </div>
+
+    <div class="contact">
+        <i class="fa-solid fa-phone"></i>
+    </div>
+</body>
+</html>
